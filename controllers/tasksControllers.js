@@ -1,4 +1,4 @@
-import * as model from "../models/taskModel.js";
+import * as model from "../models/tasksModels.js";
 
 export const getTaskController = async (req, res) => {
     const task = await model.getTask(req.params.id);
