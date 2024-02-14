@@ -1,15 +1,15 @@
-import * as model from "../models/tasksModels.js";
+import * as model from "../models/taskModel.js";
 
-export const getTaskController = async (req, res) => {
+export const getTask = async (req, res) => {
     const task = await model.getTask(req.params.id);
     if (!task) {
         res.status(404).send({ message: "Task not found" });
     } else {
-        ressend(JSON.stringify(task));
+        res.status(200).json({ task: task });
     }
 };
 
-export const createTaskController = async (req, res) => {
+export const createTask = async (req, res) => {
     const { name, priority, deadline } = req.body;
     const data = {
         name: name,
@@ -24,7 +24,7 @@ export const createTaskController = async (req, res) => {
     });
 };
 
-export const deleteTaskController = async (req, res) => {
+export const deleteTask = async (req, res) => {
     if (await model.deleteTask(req.params.id)) {
         res.status(204);
     } else {
@@ -32,20 +32,20 @@ export const deleteTaskController = async (req, res) => {
     }
 };
 
-export const updateTaskController = async (req, res) => {
+export const updateTask = async (req, res) => {
     const { name, priority, deadline } = req.body;
     const data = {
         name: name,
         priority: priority,
         deadline: deadline,
     };
-    const task = await model.updateTask(req.params.id, data);
-    if (task) {
-        res.status(200).json({
-            message: "Task updated successfully",
-            task: task,
-        });
-    } else {
-        res.status(404).json({ message: "task not found" });
+    const taskId = req.params.id;
+    if (!model.getTask(taskId)) {
+        return res.status(404).json({ message: "task not found" });
     }
+    model.updateTask(taskId, data);
+    res.status(200).json({
+        message: "Task updated successfully",
+        task: task,
+    });
 };

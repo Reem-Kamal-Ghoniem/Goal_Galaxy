@@ -1,7 +1,7 @@
-import { prisma } from '../utils/client.js'
+import { prisma } from '../../util/client.js'
 
 export async function getTask(taskId) {
-    const taskGet = await prisma.project.findUnique({
+    const taskGet = await prisma.tasks.findUnique({
         where: {
             id: taskId,
         },
@@ -9,10 +9,13 @@ export async function getTask(taskId) {
     return taskGet
 }
 export async function createTask(taskData) {
-
+    const task = await prisma.tasks.create({
+        data: taskData
+    })
+    return task
 }
 export async function deleteTask(taskId) {
-    const taskDel = await prisma.project.delete({
+    const taskDel = await prisma.tasks.delete({
         where: {
             id: taskId,
         },
@@ -26,13 +29,7 @@ export async function updateTask(taskId, taskData) {
         where: {
             id: taskId,
         },
-        data: {
-            name: taskData.name,
-            priority: taskData.priority,
-            deadline: taskData.deadline
-        },
+        data: taskData
     })
     return taskUpd
-} name: name,
-    priority: priority,
-        deadline: deadline
+} 

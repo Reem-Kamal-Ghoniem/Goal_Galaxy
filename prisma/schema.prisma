@@ -11,23 +11,28 @@ datasource db {
 }
 
 model User {
-  id          String  @id @default(uuid())
-  email       String  @unique
-  name        String
-  password    String
-  normalTasks Tasks[] @relation("normalTasks")
-  urgentTasks Tasks[] @relation("urgentTasks")
+  id       String  @id @default(uuid())
+  email    String  @unique
+  name     String
+  password String
+  Tasks    Tasks[]
 }
 
 model Tasks {
-  id            String   @id @default(uuid())
-  title         String
-  describtion   String?
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
-  deadline      DateTime
-  User          User     @relation("normalTasks", fields: [userId], references: [id])
-  userId        String
-  urgentTasks   User?    @relation("urgentTasks", fields: [urgentTasksId], references: [id])
-  urgentTasksId String?
+  id          String   @id @default(uuid())
+  title       String
+  describtion String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  deadline    DateTime
+  priority    Priority @default(Normal)
+  User        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      String
+}
+
+enum Priority {
+  Critical
+  High
+  Normal
+  Low
 }
