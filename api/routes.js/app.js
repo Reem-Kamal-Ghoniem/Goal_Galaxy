@@ -2,6 +2,7 @@ import express from "express";
 import task from "./routes/taskRoute";
 import user from "./routes/userRoute";
 
+
 const app = express();
 app.use(express.json());
 app.use(user);

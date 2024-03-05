@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Goal Galaxy</title>
+        <link rel="shortcut icon" href="./logo/galaxy.jpg" >
+        <link rel="stylesheet" href="./style/landing.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+    </head>
+    <body>
+        <button> LOGIN / REGISTER </button>
+        <div><h1>Welcome to Goal Galaxy</h1><P>your gateway to organized productivity in the vast cosmos of tasks!
+
+            With Goal Galaxy, you can effortlessly organize your tasks according to priority and deadlines, ensuring that your journey towards success is smooth and efficient.
+            
+            Register now to embark on your interstellar trip towards productivity. Explore the stars of your goals, align them according to priority, and set deadlines to guide your path through the galaxies of accomplishment.
+            
+            Don't let your tasks drift aimlessly in space – join Goal Galaxy today and chart a course towards your brightest achievements!</div>
+        </p>
+        </body>
+</html>

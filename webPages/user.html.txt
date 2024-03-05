@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Goal Galaxy</title>
+        <link rel="shortcut icon" href="./logo/galaxy.jpg" >
+        <link rel="stylesheet" href="./style/user.css"/>
+    </head>
+    <body>
+        <header>
+            <h1>Goal Galaxy</h1>
+        </header>
+        <form>
+            <h2>LOGIN</h2>
+            <label for="name">UserName</label>
+            <input class="name" type="text" name="name" value="entre your name">
+            <label for="email">Email</label>
+            <input class="email" type="email" name="email" value="entre your email">
+            <label for="password">Password</label>
+            <input class="password" type="password" name="password" value="entre your password">
+            <input class="submit" type="submit" value="LOGIN">
+        </form>
+        <button class="register">Register</button>
+    </body>
+</html>

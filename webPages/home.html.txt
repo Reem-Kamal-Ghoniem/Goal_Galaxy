@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Goal Galaxy</title>
+        <link rel="shortcut icon" href="./logo/galaxy.jpg" >
+        <link rel="stylesheet" href="./style/home.css"/>
+    </head>
+    <body>
+        
+        <header>
+            <h1>Goal Galaxy</h1>
+            <button class="logout"></button>
+        </header>
+        <div class="main">
+            <div class="side"><h2>Achievements</h2>
+                <ul>
+                    <li>task1 <button class="delete"><b>X</b></button></li>
+                    <li>task2<button class="delete"><b>X</b></button></li>
+                </ul>
+            </div>
+            <div class="con">
+                <div class="content">
+                    <div class="task">
+                        <div class="header">
+                        <h3>tite</h3>
+                        <div class="edit"></div>
+                        </div>
+                        <P>this task talks about finishing api endpoints</P>
+                        <ul class="data">
+                             <li><div class="deadline"></div> deadline</li>
+                             <li><div class="priority"></div> priority</li>
+                        </ul>
+                        <button class="done">✓</button>
+                    </div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                    <div class="task"></div>
+                </div>
+            </div> 
+            <div class="newtask">
+                <h2>Task Data</h2>
+                <form>
+                    <label for="title">Title</label>
+                    <input class="title" name="title" type="text" value="entre task tiltle">
+                    <label for="desc">Description</label>
+                    <textarea class="desc" name="describtion" rows="4" cols="50">entre task description</textarea>
+                    <label for="dead_line">Deadline</label>
+                    <input class="dead_line" name="deadline" type="datetime-local">
+                    <label for="Priority">Priority</label>
+                    <select class="Priority" name="priority">
+                        <option value="Critical">Critical</option>
+                        <option value="High">High</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Low">Low</option>
+                    </select>
+                    <input type="submit" class="submit" value="submit">
+                </form>
+            </div>
+            <div class="blur"></div>
+            <button class="add">+</button>        
+        </div>
+        <footer></footer>
+        
+    </body>
+</html>

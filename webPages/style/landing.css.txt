@@ -1,0 +1,37 @@
+html {
+  background-image: url("../logo/landing.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+}
+body{
+    position: relative;
+    overflow-x: hidden;
+}
+button{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    background-color:rgb(11, 9, 9);
+    color:  #ffffff;
+    height: 35px;
+    border: 3px solid rgb(239 239 255 / 99%);
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 6px;
+}
+div{
+    color:  #ffffff;
+    width: 450px;
+    position: absolute;
+    left: 25px;
+    top: 120px;
+    font-family: 'Brush Script MT', cursive;
+    border-radius: 15px;
+    padding: 9px;
+}
+p{
+    font-size: 20px;
+    text-indent: 50px;
+    font-family: 'Times New Roman', serif;
+}
